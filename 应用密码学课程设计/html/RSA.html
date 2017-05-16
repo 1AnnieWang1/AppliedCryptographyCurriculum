@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RSA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href="../css/bootstrap.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+  
+  <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="main.html">课程大实验</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="caesar.html">凯撒密码</a></li>
+            <li><a href="Frequency.html">频率统计分析</a></li>
+            <li><a href="DES.html">DES</a></li>
+            <li class="active"><a href="RSA.html">RSA</a></li>
+
+          </ul>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="">王亚妮</a></li>
+            <!-- <li class="active"><a href="./">王亚妮 <span class="sr-only">(current)</span></a></li> -->
+            <li><a href="">2014211512</a></li>
+          </ul>
+
+
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <form>
+      <div class="form-group">
+        <textarea class="form-control" rows="3" id="RSAIn" placeholder="请输入明文或者密文"></textarea> 
+      </div>
+
+      <div class="form-group">
+        <p class="form-control" id="p">p: </p>
+        <p class="form-control" id="q">q: </p>
+        <p class="form-control" id="N">N: </p>
+        <p class="form-control" id="E">E: </p>
+        <p class="form-control" id="D">D: </p>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="product()">产生密钥</button>
+      <button type="button" class="btn btn-primary" onclick="Encryption()">加密</button>
+      <button type="button" class="btn btn-primary" onclick="Decryption()">解密</button>
+
+      <input type="file" id="RSAEncryptFiles" style="display:none" onchange="RSAEncryptFile();"/>
+      <input type="button"  class="btn btn-primary" id="RSAFileEncrypt" value="文件加密"/>
+
+      <input type="file" id="RSADecryptFiles" style="display:none" onchange="RSADecryptFile();"/>
+      <input type="button"  class="btn btn-primary" id="RSAFileDecrypt" value="文件解密"/>
+
+      <div class="form-group">
+
+        <textarea class="form-control" rows="3" id="RSAOut"></textarea>
+      </div>
+
+    </form>
+    
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/FileSaver.js"></script>
+    <script type="text/javascript" src="../js/RSA.js"></script>
+   
+  </body>
+</html>
